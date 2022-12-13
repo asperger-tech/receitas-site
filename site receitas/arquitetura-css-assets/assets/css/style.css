@@ -1,0 +1,332 @@
+.cabecalho {
+    align-items: center;
+    background: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 3rem;
+}
+@media screen and (min-width: 500){
+    .cabecalho{
+        justify-content: center;
+        padding: 0 1rem;
+    }
+}
+
+/* MENU */
+
+.menu__lista {
+    display: flex;
+}
+.menu__item {
+    list-style: none;
+    margin-right: 1.4rem;
+    font-size: 1.2rem;
+}
+.menu__lista:last-child .menu__link {
+    margin-right: 0;
+}
+.menu__link {
+    text-decoration: none;
+    color: #808080;
+    text-transform: lowercase;
+}
+.menu__item .ativo {
+    color: #333333;
+    font-weight: bold;
+}
+.menu__item:hover {
+    text-decoration: underline;
+}
+
+/*BANNER*/
+
+.banner {
+    position: relative;
+}
+.banner__imagem {
+    background-image: url(../img/banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: calc(100vh - 72px);
+}
+.banner__titulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    color: #fdfdfd;
+    font-size: 5rem;
+    font-family: Pacifico, cursive;
+    width: 100%;
+    text-shadow: 0px 4px 4px rgb(0,0,0,0.75);
+    transform: translate(-50%, -50%);
+}
+
+/* SOBRE */ 
+
+.sobre {
+    padding: 2.5rem;
+    text-align: center;
+}
+.sobre__titulo {
+    color: #8d0606;
+    font-family: Pacifico, cursive;
+    font-size: 3.2rem;
+}
+.sobre__descricao {
+    color: #505050;
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+
+/* RECEITAS */
+
+.receitas {
+    background: #e5e5e5;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5rem 0 0 5rem;
+}
+.receita {
+    background: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+    margin-right: 5rem;
+    width: calc(25% - 5rem);
+}
+.receita__titulo {
+    font-size: 1.4rem;
+}
+.receita__descricao {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    text-align: justify;
+}
+.receita__conteudo {
+    padding: 1.2rem;
+}
+.receita__botao {
+    background: #be0404;
+    color: #fdfdfd;
+    padding: 1rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 500;
+    transition: .3s all ease-in-out;
+}
+.receita__botao:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background: #640202d8;
+}
+
+
+/* QUEM SOMOS */
+
+.quem-somos__titulo {
+    font-family: Pacifico, cursive;
+    color: #8d0606;
+    margin-bottom: 1rem;
+    font-size: 3.2rem;
+}
+.quem-somos {
+    text-align: center;
+    padding: 5rem;
+}
+.quem-somos__descricao{
+    font-weight: 300;
+    color: #595959;
+    font-size: 1.7rem;
+}
+.pessoa {
+    display: flex;
+    flex-direction: column;
+}
+.pessoa__nome {
+    font-family: Pacifico, cursive;
+    margin: 1rem 0rem;
+    font-size: 2rem;
+    color: #8d0606;
+}
+.pessoa__funcao {
+    text-transform: lowercase;
+    color: #595959;
+    font-size: 1.2rem;
+}
+.pessoas {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 3rem;
+}
+.pessoa__imagem {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+}
+.pessoa__imagem--roberta {
+    background-image: url('../img/pessoas/roberta.jpg');
+}
+.pessoa__imagem--marcela {
+    background-image: url('../img/pessoas/marcela.jpg');
+}
+.pessoa__imagem--andreia {
+    background-image: url('../img/pessoas/andreia.jpg');
+}
+
+/* RODAPE */
+
+.rodape {
+    background: #0e0e0e;
+    text-align: left;
+    padding: 1.5rem 10%;
+}
+.icones {
+    display: flex;
+}
+.instagram {
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+}
+.contato {
+    color: #eeeeee;
+    font-size: 1.3rem;
+}
+
+
+/* RESPONSIVIDADE */
+
+
+@media screen and (max-width:810px){
+    .logo{
+        display: none;
+    }
+    .cabecalho{
+        justify-content: flex-end;
+        padding: 0 1rem;
+        font-size: 1rem;
+    }
+    .banner__titulo{
+        font-size: 3.5rem;
+    }
+    .sobre__titulo{
+        font-size: 2.5rem;
+    }
+    .sobre__descricao{
+        font-size: 1.5rem;
+    }
+    .receitas {
+        padding: 5rem 0;
+        margin: 0 auto;
+        
+    }
+    .receita{
+        margin: 0 auto;
+        margin-bottom: 5rem;
+    }
+    .banner__imagem{
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width:1190px){
+    .receitas {
+        background: #e5e5e5;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .receita {
+        background: #fdfdfd;
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 5rem);
+    }
+    .banner__titulo {
+        width: 70%;
+    }
+    
+    .pessoa {
+        margin-bottom: 3rem;
+    }
+    .pessoas {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:580px){
+    .receitas{
+        background: #e5e5e5;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .banner__titulo{
+        font-size: 2.5rem;
+    }
+    .banner__imagem{
+        height: 60vh;
+    }
+    .receita {
+        width: 60%;
+        margin-bottom: 3rem;
+    }
+    .contato {
+        font-size: 1rem;
+    }
+    .menu__link{
+        font-size: 1rem;
+    }
+    .cabecalho{
+        padding: 0;
+    }
+    .sobre__titulo{
+        font-size: 1.8rem;
+    }
+    .sobre__descricao{
+        font-size: 1.3rem;
+    }
+    .quem-somos__titulo{
+        font-size: 2rem;
+    }
+    .quem-somos__descricao{
+        font-size: 1.3rem;
+    }
+    
+    .pessoa__imagem{
+        height: 230px;
+        width: 230px;
+    }
+}
+@media screen and (max-width:470px){
+    .banner__titulo{
+        width: 100%;
+    }
+    .sobre__descricao{
+        font-size: 1.2rem;
+    }
+    .receita {
+        width: 70%;
+        margin-bottom: 3rem;
+    }
+    .menu__link{
+        font-size: 0.85rem;
+    }
+    .banner__imagem{
+        height: 55vh;
+    }
+    .contato {
+        color: #eeeeee;
+        font-size: 0.8rem;
+    }
+    .quem-somos {
+        text-align: center;
+        padding: 2.5rem;
+    }
+}
+
+
